@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <!-- basic -->
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <!-- mobile metas -->
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+   <!-- site metas -->
+   <title>屏東縣公共圖書館推薦系統</title>
+   <meta name="keywords" content="">
+   <meta name="description" content="">
+   <meta name="author" content="">
+   <!-- bootstrap css -->
+   <link rel="stylesheet" type="text/css" href="../static/css/bootstrap.min.css">
+   <!-- style css -->
+   <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+   <!-- Responsive-->
+   <link rel="stylesheet" href="../static/css/responsive.css">
+   <!-- fevicon -->
+   <link rel="icon" href="../static/images/fevicon.png" type="image/gif" />
+   <!-- Scrollbar Custom CSS -->
+   <link rel="stylesheet" href="../static/css/jquery.mCustomScrollbar.min.css">
+   <!-- Tweaks for older IEs-->
+   <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+   <!-- owl stylesheets -->
+   <link rel="stylesheet" href="../static/css/owl.carousel.min.css">
+   <link rel="stylesheet" href="../static/css/owl.theme.default.min.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"
+      media="screen">
+   <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+   
+   <!-- 功能 -->
+   <script src="https://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+   <script>
+      var cot = 0;//設置一個計數器，初始值為0；作用是用來監聽點擊切換的時候哪一個圖片應該隱藏或者顯示
+      function nex() {
+         if (cot <= 4) {
+            $('.imgs img').eq(cot).animate({ 'margin-left': '-305px' }, 500);
+            cot++;
+         }
+      }
+      function pre() {
+         if (cot > 0) {
+            cot--;
+            $('.imgs img').eq(cot).animate({ 'margin-left': '0' }, 500);
+         }
+      }
+      var cot1 = 0;
+      function nex1() {//新書
+         if (cot1 <= 4) {
+            $('.imgs1 img').eq(cot1).animate({ 'margin-left': '-305px' }, 500);
+            cot1++;
+         }
+      }
+      function pre1() {
+         if (cot1 > 0) {
+            cot1--;
+            $('.imgs1 img').eq(cot1).animate({ 'margin-left': '0' }, 500);
+         }
+      }
+      var cot2 = 0;
+      function nex2() {//分類
+         if (cot2 <= 4) {
+            $('.imgs2 img').eq(cot2).animate({ 'margin-left': '-305px' }, 500);
+            cot2++;
+         }
+      }
+      function pre2() {
+         if (cot2 > 0) {
+            cot2--;
+            $('.imgs2 img').eq(cot2).animate({ 'margin-left': '0' }, 500);
+         }
+      }
+      var cot3= 0;
+      function nex3() {//流行
+         if (cot3 <= 4) {
+            $('.imgs3 img').eq(cot3).animate({ 'margin-left': '-305px' }, 500);
+            cot3++;
+         }
+      }
+      function pre3() {
+         if (cot3 > 0) {
+            cot3--;
+            $('.imgs3 img').eq(cot3).animate({ 'margin-left': '0' }, 500);
+         }
+      }
+      var cot4 = 0;
+      function nex4() {//作者
+         if (cot4 <= 4) {
+            $('.imgs4 img').eq(cot4).animate({ 'margin-left': '-305px' }, 500);
+            cot4++;
+         }
+      }
+      function pre4() {
+         if (cot4 > 0) {
+            cot4--;
+            $('.imgs4 img').eq(cot4).animate({ 'margin-left': '0' }, 500);
+         }
+      }
+   </script>
+</head>
+
+<body>
+   <!-- header section start -->
+   <div class="header_section">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+         <a class="logo" href="index.html"><img src="../static/images/logo.png"></a>
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+               <li class="nav-item active">
+                  <a class="nav-link" href="index.html">主頁</a>
+               </li>
+			  <li class="nav-item active">
+                  <a class="nav-link" href="https://app.powerbi.com/view?r=eyJrIjoiM2MzZDVmM2QtZWU2NS00ZDE0LWExMTktNjcxNmNhZmQ3NTI1IiwidCI6IjQ4NDM4ZDUzLTM5MWEtNDA4My05OTdlLTYzZTcwNTMzOGFmZCIsImMiOjEwfQ%3D%3D">借閱分析</a>
+               </li>
+            </ul>
+            <div class="search_icon"><a href="index2.html"><img src="../static/images/user-icon.png"><span
+                     class="padding_left_15">登出</span></a></div>
+         </div>
+      </nav>
+   </div>
+   <!-- header section end -->
+   <!-- banner section end -->
+   <div class="banner_section layout_padding">
+      <div class="container">
+         <div class="row">
+            <div class="col-md-6">
+               <div class="banner_taital">屏東縣公共圖書館<br>圖書推薦</div>
+               <p class="banner_text">您貼心的尋書指南 </p>
+               <!-- <div class="see_bt"><a href="#">See More</a></div> -->
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- banner section end -->
+
+   <!-- books section start -->
+   <div class="movies_section layout_padding">
+      <div class="container">
+         <div class="movies_menu">
+            <ul>
+               <li class="active"><a href="#R1">最愛推薦</a></li>
+               <li><a href="#R3">分類推薦</a></li>
+               <li><a href="#R4">流行推薦</a></li>
+               <li><a href="#R5">作者推薦</a></li>
+               <li><a href="#R2">新品推薦</a></li>
+
+            </ul>
+         </div>
+
+         <div class="movies_section_2 layout_padding" style="width:900px;margin:auto;overflow:hidden">
+            <h2 class="letest_text" id="R1" style="width:50000px;">最愛推薦</h2>
+            <!--<div class="seemore_bt"><a href="BOOKRS.html">更多推薦</a></div>-->
+            <div>
+               <!--<div onclick="pre()" style="float:left;cursor:pointer">上一頁</div>-->
+               <!--<div onclick="nex()" style="float:right;cursor:pointer">下一頁</div>-->
+            </div>
+            <div class="movies_main">
+               <div class="iamge_movies_main">
+                  <div style="width:900px;margin:auto;overflow:hidden">
+                     <!-- 這個最外圍的容器div寬度為900px，每張圖寬為300px，所以只顯示3張，剩下的圖超出容器隱藏起來 -->
+                     <div class="imgs" style="width:50000px;">
+                        <!--{% for i in imagelist %}
+                         <img src = "{{url_for('images', filename='')}}">
+                         {% endfor %}-->
+                         <!--這個div的作用是讓所有的圖片都排在同一水平上，這樣子切換的時候效果會更好-->
+                         <img src="../static/A117606lover/0.jpg"  width="200" height="100"/>
+                         <img src="../static/A117606lover/1.jpg"  width="200" height="100"/>
+                         <img src="../static/A117606lover/2.jpg"  width="200" height="100"/>
+                         <img src="../static/A117606lover/3.jpg"  width="200" height="100"/>
+                         <img src="../static/A117606lover/4.jpg"  width="200" height="100"/>
+                         <img src="../static/A117606lover/5.jpg"  width="200" height="100"/>
+                         <img src="../static/A117606lover/6.jpg"  width="200" height="100"/>
+                         <img src="../static/A117606lover/7.jpg"  width="200" height="100"/>
+                         <img src="../static/A117606lover/8.jpg"  width="200" height="100"/>
+                         <img src="../static/A117606lover/9.jpg"  width="200" height="100"/>
+                     </div>
+                     <div>
+                         <div onclick="pre()" style="float:left;cursor:pointer">上一頁</div>
+                         <div onclick="nex()" style="float:right;cursor:pointer">下一頁</div>
+                     </div>
+                 </div>
+               </div>
+            </div>
+         </div>
+         
+         <div class="movies_section_2 layout_padding" style="width:900px;margin:auto;overflow:hidden">
+            <h2 class="letest_text" id="R3" style="width:50000px;">分類推薦</h2>
+            <div class="movies_main">
+               <div class="iamge_movies_main">
+                  <div style="width:900px;margin:auto;overflow:hidden">
+                     <!-- 這個最外圍的容器div寬度為900px，每張圖寬為300px，所以只顯示3張，剩下的圖超出容器隱藏起來 -->
+                     <div class="imgs2" style="width:50000px;">
+                        <img src="../static/A117606class/0.jpg"  width="200" height="100"/>
+                        <img src="../static/A117606class/1.jpg"  width="200" height="100"/>
+                        <img src="../static/A117606class/2.jpg"  width="200" height="100"/>
+                        <img src="../static/A117606class/3.jpg"  width="200" height="100"/>
+                        <img src="../static/A117606class/4.jpg"  width="200" height="100"/>
+                        <img src="../static/A117606class/5.jpg"  width="200" height="100"/>
+                        <img src="../static/A117606class/6.jpg"  width="200" height="100"/>
+                        <img src="../static/A117606class/7.jpg"  width="200" height="100"/>
+                        <img src="../static/A117606class/8.jpg"  width="200" height="100"/>
+                        <img src="../static/A117606class/9.jpg"  width="200" height="100"/>
+
+                         <!--這個div的作用是讓所有的圖片都排在同一水平上，這樣子切換的時候效果會更好-->
+                      
+                     </div>
+                     <div>
+                         <div onclick="pre2()" style="float:left;cursor:pointer">上一頁</div>
+                         <div onclick="nex2()" style="float:right;cursor:pointer">下一頁</div>
+                     </div>
+                 </div>
+               </div>
+            </div>
+         </div>
+         <div class="movies_section_2 layout_padding" style="width:900px;margin:auto;overflow:hidden">
+               <h2 class="letest_text" id="R4" style="width:50000px;">流行推薦</h2>
+               <!--<div class="seemore_bt"><a href="BOOKRS.html">更多推薦</a></div>-->
+               <div>
+                  <!--<div onclick="pre()" style="float:left;cursor:pointer">上一頁</div>-->
+                  <!--<div onclick="nex()" style="float:right;cursor:pointer">下一頁</div>-->
+               </div>
+               <div class="movies_main">
+                  <div class="iamge_movies_main">
+                     <div style="width:900px;margin:auto;overflow:hidden">
+                        <!-- 這個最外圍的容器div寬度為900px，每張圖寬為300px，所以只顯示3張，剩下的圖超出容器隱藏起來 -->
+                        <div class="imgs3" style="width:50000px;">
+                            <!--這個div的作用是讓所有的圖片都排在同一水平上，這樣子切換的時候效果會更好-->
+                            <img src="../static/A114720Popularity/0.jpg"  width="200" height="100"/>
+                            <img src="../static/A114720Popularity/1.jpg"  width="200" height="100"/>
+                            <img src="../static/A114720Popularity/2.jpg"  width="200" height="100"/>
+                            <img src="../static/A114720Popularity/3.jpg"  width="200" height="100"/>
+                            <img src="../static/A114720Popularity/4.jpg"  width="200" height="100"/>
+                            <img src="../static/A114720Popularity/5.jpg"  width="200" height="100"/>
+                            <img src="../static/A114720Popularity/6.jpg"  width="200" height="100"/>
+                            <img src="../static/A114720Popularity/7.jpg"  width="200" height="100"/>
+                            <img src="../static/A114720Popularity/8.jpg"  width="200" height="100"/>
+                            <img src="../static/A114720Popularity/9.jpg"  width="200" height="100"/>
+                        </div>
+                        <div>
+                            <div onclick="pre3()" style="float:left;cursor:pointer">上一頁</div>
+                            <div onclick="nex3()" style="float:right;cursor:pointer">下一頁</div>
+                        </div>
+                    </div>
+                  </div>
+               </div>
+         </div>   
+         <div class="movies_section_2 layout_padding" style="width:900px;margin:auto;overflow:hidden">
+               <h2 class="letest_text" id="R5" style="width:50000px;">作者推薦</h2>
+               <!--<div class="seemore_bt"><a href="BOOKRS.html">更多推薦</a></div>-->
+               <div>
+                  <!--<div onclick="pre()" style="float:left;cursor:pointer">上一頁</div>-->
+                  <!--<div onclick="nex()" style="float:right;cursor:pointer">下一頁</div>-->
+               </div>
+               <div class="movies_main">
+                  <div class="iamge_movies_main">
+                     <div style="width:900px;margin:auto;overflow:hidden">
+                        <!-- 這個最外圍的容器div寬度為900px，每張圖寬為300px，所以只顯示3張，剩下的圖超出容器隱藏起來 -->
+                        <div class="imgs4" style="width:50000px;">
+                           <img src="../static/A117606writer/0.jpg"  width="200" height="100"/>
+                           <img src="../static/A117606writer/1.jpg"  width="200" height="100"/>
+                           <img src="../static/A117606writer/2.jpg"  width="200" height="100"/>
+                           <img src="../static/A117606writer/3.jpg"  width="200" height="100"/>
+                           <img src="../static/A117606writer/4.jpg"  width="200" height="100"/>
+                           <img src="../static/A117606writer/5.jpg"  width="200" height="100"/>
+                           <img src="../static/A117606writer/6.jpg"  width="200" height="100"/>
+                           <img src="../static/A117606writer/7.jpg"  width="200" height="100"/>
+                           <img src="../static/A117606writer/8.jpg"  width="200" height="100"/>
+                           <img src="../static/A117606writer/9.jpg"  width="200" height="100"/>
+                            <!--這個div的作用是讓所有的圖片都排在同一水平上，這樣子切換的時候效果會更好-->
+                        </div>
+                        <div>
+                            <div onclick="pre4()" style="float:left;cursor:pointer">上一頁</div>
+                            <div onclick="nex4()" style="float:right;cursor:pointer">下一頁</div>
+                        </div>
+                    </div>
+                  </div>
+               </div>
+         </div>
+         <div class="movies_section_2 layout_padding" style="width:900px;margin:auto;overflow:hidden">
+            <h2 class="letest_text" id="R2" style="width:50000px;">新品推薦</h2>
+            <!--<div class="seemore_bt"><a href="BOOKRS.html">更多推薦</a></div>-->
+            <div>
+               <!--<div onclick="pre()" style="float:left;cursor:pointer">上一頁</div>-->
+               <!--<div onclick="nex()" style="float:right;cursor:pointer">下一頁</div>-->
+            </div>
+            <div class="movies_main">
+               <div class="iamge_movies_main">
+                  <div style="width:900px;margin:auto;overflow:hidden">
+                     <!-- 這個最外圍的容器div寬度為900px，每張圖寬為300px，所以只顯示3張，剩下的圖超出容器隱藏起來 -->
+                     <div class="imgs1" style="width:50000px;">
+                         <!--這個div的作用是讓所有的圖片都排在同一水平上，這樣子切換的時候效果會更好-->
+                         <img src="../static/newbook_recommend/0.jpg"  width="200" height="100"/>
+                         <img src="../static/newbook_recommend/1.jpg"  width="200" height="100"/>
+                         <img src="../static/newbook_recommend/2.jpg"  width="200" height="100"/>
+                         <img src="../static/newbook_recommend/3.jpg"  width="200" height="100"/>
+                         <img src="../static/newbook_recommend/4.jpg"  width="200" height="100"/>
+                         <img src="../static/newbook_recommend/5.jpg"  width="200" height="100"/>
+                         <img src="../static/newbook_recommend/6.jpg"  width="200" height="100"/>
+                         <img src="../static/newbook_recommend/7.jpg"  width="200" height="100"/>
+                         <img src="../static/newbook_recommend/8.jpg"  width="200" height="100"/>
+                         <img src="../static/newbook_recommend/9.jpg"  width="200" height="100"/>
+                     </div>
+                     <div>
+                         <div onclick="pre1()" style="float:left;cursor:pointer">上一頁</div>
+                         <div onclick="nex1()" style="float:right;cursor:pointer">下一頁</div>
+                     </div>
+                 </div>
+               </div>
+            </div>
+         </div>
+      
+   </div>         
+      
+   </div>
+</div>
+</div>
+
+
+<div class="footer_section layout_padding">
+      <div class="container">
+         <div class="footer_menu">
+            <ul>
+               <li class="active"><a href="#R1">最愛推薦</a></li>
+               <li><a href="#R3">分類推薦</a></li>
+               <li><a href="#R4">流行推薦</a></li>
+               <li><a href="#R5">作者推薦</a></li>
+               <li><a href="#R2">新品推薦</a></li>
+            </ul>
+         </div>
+         <div class="social_icon">
+            <ul>
+               <li><a href="https://zh-tw.facebook.com/ptclib/"><img src="../static/images/fb-icon.png"></a></li>
+               <li><a href="https://mobile.twitter.com/hashtag/%E5%B1%8F%E6%9D%B1%E5%9C%96%E6%9B%B8%E9%A4%A8"><img
+                        src="../static/images/twitter-icon.png"></a></li>
+               <li><a href="#"><img src="../static/images/linkedin-icon.png"></a></li>
+               <li><a href="#"><img src="../static/images/instagram-icon.png"></a></li>
+            </ul>
+         </div>
+      </div>
+   </div>
+   <!-- footer  section end -->
+   <!-- copyright section start -->
+   <div class="copyright_section">
+      <div class="container">
+         <div class="copyright_text">Copyright 2022 All Right Reserved By <a href="https://html.design">AIGO</a></div>
+      </div>
+   </div>
+   <!-- copyright section end -->
+   <!-- Javascript files-->
+   <script src="../static/js/jquery.min.js"></script>
+   <script src="../static/js/popper.min.js"></script>
+   <script src="../static/js/bootstrap.bundle.min.js"></script>
+   <script src="../static/js/jquery-3.0.0.min.js"></script>
+   <!-- sidebar -->
+   <script src="../static/js/jquery.mCustomScrollbar.concat.min.js"></script>
+   <script src="../static/js/custom.js"></script>
+   <!-- javascript -->
+   <script src="../static/js/owl.carousel.js"></script>
+   <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+   <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
+   <script>
+      $('#datepicker').datepicker({
+         uiLibrary: 'bootstrap4'
+      });
+   </script>
+</body>
+
+</html>
